@@ -2886,8 +2886,7 @@ tbody.collapse.show {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  width: 400px;
-  right: 0;
+  left: -19%;
   z-index: 1000;
   display: none;
   float: left;
