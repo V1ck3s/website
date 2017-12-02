@@ -12,7 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     
     
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark justify-content-between">
     <a class="navbar-brand" href="#">
     <img src="https://recettes-et-mirettes.fr/wp-content/uploads/2017/09/09.png" width="30" height="30" alt="">
     </a>
