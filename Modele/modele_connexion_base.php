@@ -1,3 +1,4 @@
+
 <?php
 	/**
 	* Classe d'accès aux données.
@@ -19,10 +20,10 @@
 		public static function getInstance(){
 			if( Connexion :: $monPdo == null){
 				try{
-					$serveur='mysql:host=';
-					$bdd='dbname=';
-					$user='';
-					$mdp='';
+					$serveur='mysql:host=front-ha-mysql-01.shpv.fr';
+					$bdd='dbname=wiyhousp_recettes';
+					$user='wiyhousp_root';
+					$mdp='Rootmdp1';
 					Connexion::$monPdo = new PDO($serveur.';'.$bdd, $user,$mdp);
 					Connexion::$monPdo->query("SET CHARACTER SET utf8");
 				}catch (PDOException $e){
