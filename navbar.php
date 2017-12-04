@@ -22,7 +22,7 @@
     
     
   
-  <div class="collapse navbar-collapse col" id="navbarNav">
+  <div class="collapse navbar-collapse" id="navbarNav">
     <a class="navbar-brand" href="#">Site de Recettes</a>
       <ul class="navbar-nav">
       <li class="nav-item active">
@@ -50,52 +50,18 @@
     <div class="container col">
 
 
-        <div class="dropdown col"> <!-- Dropdown menu connecter -->
-      <button class="btn btn-light dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        
+      <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Se connecter
       </button>
-      <form class="dropdown-menu pull-left p-4">
-      <div class="form-group">
-        <label for="exampleDropdownFormEmail2">Adresse e-mail</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-      </div>
-      <div class="form-group">
-        <label for="exampleDropdownFormPassword2">Mot de passe</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input">
-          Retenir mot de passe
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Connexion</button>
-    </form>
-    </div>  
+      
 
-
-
-
-
-
-        <div class="dropdown col"> <!--dropdown menu pour s'inscrire-->
-      <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         S'inscrire
       </button>
-      <form class="dropdown-menu pull-left p-4">
-      <div class="form-group">
-        <label for="exampleDropdownFormEmail2">Adresse e-mail</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-      </div>
-      <div class="form-group">
-        <label for="exampleDropdownFormPassword2">Mot de passe</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-      </div>
-      <button type="submit" class="btn btn-primary">S'inscrire</button>
-    </form>
-    </div>
+     
     
-    <div class="container col-7">
+    <div class="container col">
         </div>
     
     </div>
