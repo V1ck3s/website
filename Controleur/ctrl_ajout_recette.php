@@ -16,7 +16,7 @@
 					echo"<script> alert ('La recette a été ajoutée');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'index.php';");
+					print ("location.href = 'index.php?do=recettes';");
 					print ("</script>");
 				}
 				else
