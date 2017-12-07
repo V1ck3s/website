@@ -4,7 +4,7 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("Modele/modele_connexion_base.php");
+			require_once("../Modele/modele_connexion_base.php");
 			$this->cx = Connexion::getInstance();
 		}
     
@@ -13,13 +13,13 @@
 			//récupération des valeurs des champs:
 			 $nom=$_POST['ins_nom'];
 			 $prenom=$_POST['ins_prenom'];
-			 $tel=$_POST['ins_login'];
-             $email=$_POST['ins_mail'];
-             $mdp=md5($_POST['mdp']);
+			 $login=$_POST['ins_login'];
+             $mail=$_POST['ins_mail'];
+             $mdp=md5($_POST['ins_pass']);
 			 
 			 
 			//requête permettant de vérifier la présence ou non d'un login d'utilisateur
-		   $sql = "SELECT mail FROM utilisateur WHERE mail = '".$_POST["ins_email"]."' ";
+		   $sql = "SELECT mail FROM utilisateur WHERE mail = '".$_POST["ins_mail"]."' ";
 		   $uneRequete = $this->cx->query($sql);
 		   $uneRequete->execute();
 		   //Renvoie le nombre de ligne présent (0 = aucune données présentes)

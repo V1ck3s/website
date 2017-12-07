@@ -1,5 +1,5 @@
 <html>
-    <link href="css/bootstrap.css" rel="stylesheet"> 
+    <link href="/website/css/bootstrap.css" rel="stylesheet"> 
     
         <!--
         <script src="js/jquery.js"></script>
@@ -14,7 +14,8 @@
     
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark justify-content-between">
     <a class="navbar-brand" href="#">
-    <img src="https://recettes-et-mirettes.fr/wp-content/uploads/2017/09/09.png" width="30" height="30" alt="">
+        <a href="/website/index.php">
+    <img src="https://recettes-et-mirettes.fr/wp-content/uploads/2017/09/09.png" width="30" height="30" alt=""></a>
     </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@
     
     
   
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse col" id="navbarNav">
     <a class="navbar-brand" href="#">Site de Recettes</a>
       <ul class="navbar-nav">
       <li class="nav-item active">
@@ -50,17 +51,10 @@
     <div class="container col">
 
 
+        <a href="/website/Vue/vue_inscription.php" class="btn btn-light" role="button">Se connecter</a>
+        <a href="/website/Vue/vue_inscription.php" class="btn btn-primary" role="button">S'inscrire</a>
         
-      <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Se connecter
-      </button>
-      
-
-      <button class="btn btn-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        S'inscrire
-      </button>
-     
-    
+        
     <div class="container col">
         </div>
     
