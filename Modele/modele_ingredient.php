@@ -4,7 +4,7 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("Modele/modele_connexion_base.php");
+			require_once("../Modele/modele_connexion_base.php");
 			$this->cx = Connexion::getInstance();
 		}
 			

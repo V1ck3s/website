@@ -5,7 +5,7 @@
 		{
 			if($_POST != null)
 			{
-				require ("Modele/modele_ajout_recette.php");
+				require ("../Modele/modele_ajout_recette.php");
 				
 				$a= new AjoutRecette();			
 				
@@ -33,14 +33,14 @@
 				?>		
 				<script type="text/javascript">
 					alert('Veuillez remplir les champs afin de mettre une recette');
-					location.href = 'index.php?do=ajout';
+					location.href = '../Vue/vue_ajout_recette.php';
 				</script>
 				<?php
 			}
 		}
 		else
 		{
-			include("Vue/vue_ajout_recette.php");
+			include("../Vue/vue_ajout_recette.php");
 		}
 	}
 	else

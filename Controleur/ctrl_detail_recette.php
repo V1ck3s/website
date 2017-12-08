@@ -1,6 +1,6 @@
 <?php
-	require_once ("Modele/modele_recette.php");
-	require_once ("Modele/modele_ingredient.php");
+	require_once ("../Modele/modele_recette.php");
+	require_once ("../Modele/modele_ingredient.php");
 	
 	$r=new Recette();
 	$i=new Ingredient();
@@ -11,7 +11,7 @@
 	
 	if($uneRecette != null){
 	    //je passe la main à la vue
-	    include("Vue/vue_detail_recette.php");
+	    include("../Vue/vue_detail_recette.php");
 	}
 	else
 	{

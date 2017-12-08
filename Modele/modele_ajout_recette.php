@@ -4,7 +4,7 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("Modele/modele_connexion_base.php");
+			require_once("../Modele/modele_connexion_base.php");
 			$this->cx = Connexion::getInstance();
 		}
     
@@ -14,13 +14,13 @@
 			$valid=false;
 		  
 			//récupération des valeurs des champs:
-			$nom=$_POST['nom'];
-			$descriptif=$_POST['descriptif'];
-			$difficulte=$_POST['difficulte'];
-			$prix=intval($_POST['prix']);
-			$personnes=intval($_POST['personnes']);
-			$preparation=intval($_POST['preparation']);
-			$cuisson=intval($_POST['cuisson']);
+			$nom=$_POST['rec_nom'];
+			$descriptif=$_POST['rec_desc'];
+			$difficulte=$_POST['rec_dif'];
+			$prix=intval($_POST['rec_prix']);
+			$personnes=intval($_POST['rec_pers']);
+			$preparation=intval($_POST['rec_prep']);
+			$cuisson=intval($_POST['rec_cuis']);
 			$totale=$preparation+$cuisson;
 			$idUtil=intval($_SESSION['idUtil']);
 			//création de la requête SQL:

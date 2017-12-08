@@ -35,8 +35,8 @@
           Recettes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ajouter une recette</a>
-          <a class="dropdown-item" href="#">Liste des recettes</a>
+          <a href="/website/Vue/vue_ajout_recette.php" class="dropdown-item" href="#">Ajouter une recette</a>
+          <a href="/website/Vue/vue_liste_recettes.php" class="dropdown-item" href="#">Liste des recettes</a>
         </div>
       </li>
         
@@ -51,7 +51,7 @@
     <div class="container col">
 
 
-        <a href="/website/Vue/vue_inscription.php" class="btn btn-light" role="button">Se connecter</a>
+        <a href="/website/Vue/vue_connexion_membre.php" class="btn btn-light" role="button">Se connecter</a>
         <a href="/website/Vue/vue_inscription.php" class="btn btn-primary" role="button">S'inscrire</a>
         
         
