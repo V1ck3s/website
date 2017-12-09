@@ -7,8 +7,8 @@
         
         
         <title>Site de recettes</title>
-        <?php include($_SERVER['DOCUMENT_ROOT'].'/website/navbar.php');?>
-        <link href="css/carousel.css" rel="stylesheet">
+        <?php include 'navbar.php';?>
+        <link href="/css/carousel.css" rel="stylesheet">
     </head>
     <body>
 

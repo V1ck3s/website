@@ -17,7 +17,7 @@
 					echo"<script> alert ('Votre inscription a été prise en compte !');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = '../index.php';");
+					print ("location.href = '/index.php';");
 					print ("</script>");
 				}
 				else
@@ -25,7 +25,7 @@
 					echo"<script> alert('Email déja présent dans la base de données !');</script>";
 					// et redirection vers la page d'inscription
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = '../Vue/vue_inscription.php';");
+					print ("location.href = '/Vue/vue_inscription.php';");
 					print ("</script>");				
 				}
 			}
@@ -41,7 +41,7 @@
 		}
 		else
 		{
-			include("../Vue/vue_inscription.php");
+			include("/Vue/vue_inscription.php");
             
 		}
 	}
