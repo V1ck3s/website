@@ -17,47 +17,12 @@
 			return $curseur;
 		}
 		
-		//retourne un curseur contenant l'objet associer à l'identifiant passé en paramètre
-		//on utilise ici la technique des requêtes préparées qui permettent d'éviter les injonctions SQL
-		public function findById($idRecette){
-			//je reçois ma requête SQL
-			$req = "SELECT recette.nom AS libRec, descriptif, difficulte, prix, nbPersonnes, 
-					dureePreparation, dureeCuisson, dureeTotale, recette.qteCalories AS cal, recette.qteProteines AS prot, recette.qteGlucides AS glu, recette.qteLipides AS lip,
-					utilisateur.nom AS utilNom, utilisateur.prenom, illustration.adresse
-					FROM recette 
-					INNER JOIN utilisateur
-					ON recette.idUtil = utilisateur.idUtil
-					INNER JOIN illustration
-					ON recette.idRec = illustration.idRec
-					INNER JOIN contenu
-					ON recette.idRec = contenu.idRec
-					INNER JOIN ingredient
-					ON contenu.idIngre = ingredient.idIngre
-					WHERE recette.idRec = :id";
-			
-			//je prépare ma requête
-			$prep = $this->cx->prepare($req);
-			
-			//j'associe les paramètres
-			$prep->bindValue(':id', $idRecette, PDO::PARAM_STR);
-			
-			//j'exécute
-			$prep->execute();
-			
-			//je remplis le curseur
-			$curseur = $prep->fetchObject();
-			return $curseur;
-		}
-		
 		public function deleteUtilisateur($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;
-		  
-			//récupération des valeurs des champs:
-			//$id=intval($_POST['util']);
 			
 			//création de la requête SQL:
-			$sql="DELETE FROM utilisateur WHERE idUtil=:id";
+			$sql="UPDATE recette SET idUtil=15 WHERE idUtil=:id";
 			
 			$requete = $this->cx->prepare($sql);
 				
@@ -67,7 +32,27 @@
 			//exécution de la requête SQL:
 			$requete->execute();
 			
-			if($requete){
+			$sql2="UPDATE menu SET idUtil=15 WHERE idUtil=:id";			
+			$requete2 = $this->cx->prepare($sql2);				
+			$requete2->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete2->execute();
+			
+			$sql3="UPDATE planning SET idUtil=15 WHERE idUtil=:id";			
+			$requete3 = $this->cx->prepare($sql3);				
+			$requete3->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete3->execute();
+			
+			$sql4="UPDATE liste_achat SET idUtil=15 WHERE idUtil=:id";			
+			$requete4 = $this->cx->prepare($sql4);				
+			$requete4->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete4->execute();
+
+			$sql5="DELETE FROM utilisateur WHERE idUtil=:id";			
+			$requete5 = $this->cx->prepare($sql5);				
+			$requete5->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete5->execute();
+			
+			if($requete && $requete2 && $requete3 && $requete4 && $requete5){
 				$valid=true;
 			}
 			return $valid;
