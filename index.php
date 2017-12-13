@@ -72,21 +72,21 @@
         <div class="row">
           <div class="col-lg-4">
             <img class="rounded-circle" src="https://i.pinimg.com/originals/9e/84/19/9e8419a67a0bc9214c235f7634533dfb.jpg" alt="Generic placeholder image" width="140" height="140">
-            <h2>Un truc bizzare</h2>
-            <p>En tant que webmaster, on sait pas trop ce que c'est ce plat. Ca à l'air bon mais on sait absolument pas ce que c'est. Apparement c'est italien. A vous de gouter !</p>
+            <h2>Posse quod colebat</h2>
+            <p>De elogio ob quoque elogio neminem factitarunt exitiale quod iussisse haec cohorte propositum propositum aliis et poenae similia neminem numquam obstinatum addictum non poenae elogio in obstinatum aliquando factitarunt oblato !</p>
             <p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="http://cache.marieclaire.fr/data/photo/w800_c17/cuisine/3z/cassoulet_traditionnel_de_castelnaudary.jpg" alt="Generic placeholder image" width="140" height="140">
-            <h2>Cassoulet traditionnel</h2>
-            <p>Un bon cassoulet William Saurin ! Oh oui ! Avec des saucisses légèrement fumées. Oh oui ! Et cette sauce cuisinée à la tomate. Oh oui !!! Le cassoulet est une spécialité régionale du Languedoc, à base de haricots secs, généralement blancs, et de viande. 
+            <h2>Publico isdem acciderat</h2>
+            <p>Et publicam neque nos oporteat locati et rem Scaevola si Scaevola longe Etenim rei ut nec curriculoque Etenim sanciatur locati Scaevola nos in neque in quis nos eo nos enim. 
             </p>
             <p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="http://cache.marieclaire.fr/data/photo/w800_c17/cuisine/40/vrai_couscous.jpg" alt="Generic placeholder image" width="140" height="140">
-            <h2>Couscous de qualité</h2>
-            <p>Merci chef ! Ce couscous de qualité est succulent ! Véritable recette fétiche des pays du Maghreb, le couscous se décline sous de nombreuses formes et couleurs. Un plat que nous aimons pour sa convivialité et sa générosité !
+            <h2>Ordinis uno vilitatem </h2>
+            <p>Id aliquotiens id velut sedisset fas specie specie sed velut quod implacabilitati legum Caesaris Caesaris urgebatur ut saevi: quaerebatur implacabilitati impleri sed tenus sedisset perpensum quaerebatur ulla praescriptis legum impleri !
             </p>
             <p><a class="btn btn-secondary" href="#" role="button">Voir les détails &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
@@ -99,12 +99,12 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Notre chef. <span class="text-muted">El Risitas.</span></h2>
-            <p class="lead">Comme il le dit si bien : Ve por la paellera, ¡venga! Que a las dos de la tarde ¡ya están aquí! Mira, en bañador, con las chanclas, todo despeinado porque no me dio tiempo… na ponerme las chanclas… ¡y el bañador!
+            <h2 class="featurette-heading">Vile inanes <span class="text-muted">flatus .</span></h2>
+            <p class="lead">Superasset ardenter carentibus haec quam statuam quod aereis primo sensu quod inter honeste Acilio quasi posse multos ad est commendari mussitare Acilio armisque consiliis delatum quidam ambigere gravius non ut !
             </p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="https://risibank.fr/cache/stickers/d87/8709-full.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="http://img.over-blog-kiwi.com/2/11/28/40/20170705/ob_8505e1_poulet-dg00.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -112,12 +112,12 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Ah oui ! c'est bon !<span class="text-muted">Voyez par vous-même...</span></h2>
-            <p class="lead">Nous créons des produits bons pour votre santé, bons pour notre environnement, bons tout simplement ! La passion pour le produit nous anime à chaque instant. Nous sommes attachés au terroir dans lequel nos légumes poussent, nos volailles gambadent, nos poissons grandissent… C’est la source de l’inspiration de nos recettes car de cette matière première va découler le goût, la texture et la typicité de chaque bocal.
+            <h2 class="featurette-heading">Et et administrante aeternam ! <span class="text-muted">vulgus et administrante...</span></h2>
+            <p class="lead">Prope promiscuae magna spatio multitudo Euphrate Indi sollemnitate flumine initium nundinas consueta consueta municipium commercanda plurima Septembris Macedonum mensis vehi ad disparatur mercatoribus prope sollemnitate municipium municipium mittunt Septembris Anthemusia.
             </p>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="http://www.lustucru.fr/app/uploads/sites/2/Lustucru_Produit_Pate_Lasagnes-250g.png" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="http://memesprit.fr/wp-content/uploads/20141210_125044b-700x400.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
@@ -125,11 +125,11 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Bordel de cul. <span class="text-muted">C'est incroyablement bon.</span></h2>
-            <p class="lead">Vous vous dites sûrement comment notre chef a t-il pu élaborer des recettes aussi bonne ? C'est pourtant simple, il a suivit les conseils d'une équipe d'ingénieur allemand, ce qui lui a permis de gagner jusqu'à 10000€ par secondes ! Oui vous lisez bien ! 10000€ par seconde seulement en épluchant les pommes de terre ! Inscrivez vous pour savoir comment il a fait !</p>
+            <h2 class="featurette-heading">Sed ultra dignitatis <span class="text-muted">oppido usibus et sed.</span></h2>
+            <p class="lead">Sed ultra dignitatis ad oppido usibus et sed et ob asperos motus crebros insolenter seditiones institutus ob avidis potestate intentum prudens sunt ob efferens usibus et institutus vini: concitatae sed !</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="http://www.ouah.fr/img/cash-cadeaux/gagner-1000-euros-tickets-a-gratter_g.gif" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="http://www.platvietnam.com/wp-content/uploads/2017/04/Soupe-d%E2%80%99aubergine-au-poitrine-de-porc.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
