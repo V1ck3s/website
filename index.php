@@ -29,7 +29,7 @@
               <div class="carousel-caption text-left">
                 <h1>Premier exemple.</h1>
                 <p>Inscrivez-vous dès maintenant pour accéder à plus de 10000 recettes en ligne et tout cela gratuitement !</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">S'inscrire maintenant</a></p>
+                <p><a class="btn btn-lg btn-primary" href="../Controleur/ctrl_inscription.php" role="button">S'inscrire maintenant</a></p>
               </div>
             </div>
           </div>
@@ -143,6 +143,7 @@
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Remonter la page</a></p>
+          <p><a href="/admin.htm">Administration</a></p>
         <p>&copy; 2017 Website, Victor et Samy.</p>
       </footer>
 

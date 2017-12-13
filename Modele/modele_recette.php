@@ -4,7 +4,7 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("../Modele/modele_connexion_base.php");
+			require_once("modele_connexion_base.php");
 			$this->cx = Connexion::getInstance();
 		}
 		
@@ -12,7 +12,7 @@
 		public function readAll(){
 			$req = "SELECT recette.idRec, recette.nom AS lib, descriptif, difficulte, prix, nbPersonnes, 
 					dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, 
-					utilisateur.nom, utilisateur.prenom, illustration.adresse
+					utilisateur.nom AS utilNom, utilisateur.prenom AS utilprenom, illustration.adresse
 					FROM recette 
 					INNER JOIN utilisateur
 					ON recette.idUtil = utilisateur.idUtil

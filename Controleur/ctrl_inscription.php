@@ -41,7 +41,7 @@
 		}
 		else
 		{
-			include("/Vue/vue_inscription.php");
+			include("../Vue/vue_inscription.php");
             
 		}
 	}

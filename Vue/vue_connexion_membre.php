@@ -12,7 +12,7 @@
     <?php include('../navbar.php'); ?>
 
     <!-- Custom styles for this template -->
-    <link href="/website/css/signin.css" rel="stylesheet">
+    <link href="/css/signin.css" rel="stylesheet">
       
   </head>
 
@@ -20,7 +20,7 @@
 
     <div class="container">
 
-      <form class="form-signin" name="inscription" action="/website/Controleur/ctrl_connexion_membre.php?mem=true" method="POST">
+      <form class="form-signin" name="inscription" action="/Controleur/ctrl_connexion_membre.php?mem=true" method="POST">
         <h2 class="form-signin-heading">Se connecter</h2>
         
           </br>

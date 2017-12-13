@@ -13,9 +13,9 @@
     
     
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark justify-content-between">
-    <a class="navbar-brand" href="#">
-        <a href="/index.php">
-    <img src="https://recettes-et-mirettes.fr/wp-content/uploads/2017/09/09.png" width="30" height="30" alt=""></a>
+    <a class="navbar-brand" href="/index.php">
+        
+    <img src="https://recettes-et-mirettes.fr/wp-content/uploads/2017/09/09.png" width="30" height="30" alt="">
     </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,10 +24,12 @@
     
   
   <div class="collapse navbar-collapse col" id="navbarNav">
-    <a class="navbar-brand" href="#">Site de Recettes</a>
+      
+    <a class="navbar-brand" href="/index.php">Site de Recettes</a>
+      
       <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/index.php">Accueil <span class="sr-only">(current)</span></a>
       </li>
         
       <li class="nav-item dropdown">
@@ -35,8 +37,8 @@
           Recettes
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a href="/Vue/vue_ajout_recette.php" class="dropdown-item" href="#">Ajouter une recette</a>
-          <a href="/Vue/vue_liste_recettes.php" class="dropdown-item" href="#">Liste des recettes</a>
+          <a href="/Controleur/ctrl_ajout_recette.php" class="dropdown-item" href="#">Ajouter une recette</a>
+          <a href="/Controleur/ctrl_liste_recettes.php" class="dropdown-item" href="#">Liste des recettes</a>
         </div>
       </li>
         
@@ -51,8 +53,8 @@
     <div class="container col">
 
 
-        <a href="/Vue/vue_connexion_membre.php" class="btn btn-light" role="button">Se connecter</a>
-        <a href="/Vue/vue_inscription.php" class="btn btn-primary" role="button">S'inscrire</a>
+        <a href="/Controleur/ctrl_connexion_membre.php" class="btn btn-light" role="button">Se connecter</a>
+        <a href="/Controleur/ctrl_inscription.php" class="btn btn-primary" role="button">S'inscrire</a>
         
         
     <div class="container col">

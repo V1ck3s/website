@@ -1,7 +1,7 @@
 <?php
 			//j'indique que j'ai besoin du fichier modele_table_article
 			//qui contient la classe table membre
-			require ("../Modele/modele_connexion.php");
+			require ("../Modele/modele_connexion_membre.php");
 			
 			//J'instancie un objet Table membre
 			$cm= new ConnexionMembre();
@@ -26,6 +26,6 @@
 			}
 			else
 			{
-				include("../Vue/vue_connexion.php");
+				include("../Vue/vue_connexion_membre.php");
 			}
 ?>

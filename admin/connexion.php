@@ -1,8 +1,8 @@
 <?php
-	$serveur='mysql:host=localhost';
-	$bdd='dbname=cuisine';
-	$user='root';
-	$mdp='';
+	$serveur='mysql:host=front-ha-mysql-01.shpv.fr';
+	$bdd='dbname=wiyhousp_recettes';
+	$user='wiyhousp_root';
+	$mdp='Rootmdp1';
 
 	// test de connexion à mysql	@ devant la commande
 	// évite que le message mysql ne s'affiche
@@ -47,10 +47,10 @@
 		public static function getInstance(){
 			if( Connexion :: $monPdo == null){
 				try{
-					$serveur='mysql:host=localhost';
-					$bdd='dbname=cuisine';
-					$user='root';
-					$mdp='';
+					$serveur='mysql:host=front-ha-mysql-01.shpv.fr';
+					$bdd='dbname=wiyhousp_recettes';
+					$user='wiyhousp_root';
+					$mdp='Rootmdp1';
 					Connexion::$monPdo = new PDO($serveur.';'.$bdd, $user,$mdp);
 					Connexion::$monPdo->query("SET CHARACTER SET utf8");
 				}catch (PDOException $e){

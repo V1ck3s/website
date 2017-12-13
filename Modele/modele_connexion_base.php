@@ -30,6 +30,7 @@
 				}catch (PDOException $e){
 					throw new Exception("Erreur à la connexion \n" . $e->getMessage());
                     
+                    
 				}
 			}
 		return Connexion::$monPdo;

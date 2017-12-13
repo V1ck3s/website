@@ -16,7 +16,7 @@
 					echo"<script> alert ('La recette a été ajoutée');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'index.php?do=recettes';");
+					print ("location.href = '../Controleur/ctrl_ajout_recette.php';");
 					print ("</script>");
 				}
 				else
@@ -24,7 +24,7 @@
 					echo"<script> alert('La recette n'a pas été ajoutée');</script>";
 					// et redirection vers la page d'inscription
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = 'index.php?do=ajout';");
+					print ("location.href = '../Controleur/ctrl_ajout_recette.php';");
 					print ("</script>");				
 				}
 			}
@@ -33,7 +33,7 @@
 				?>		
 				<script type="text/javascript">
 					alert('Veuillez remplir les champs afin de mettre une recette');
-					location.href = '../Vue/vue_ajout_recette.php';
+					location.href = '../Controleur/ctrl_ajout_recette.php';
 				</script>
 				<?php
 			}
@@ -47,7 +47,7 @@
 	{
 		// et redirection vers la page d'accueil
 		print ("<script language = \"JavaScript\">");
-		print ("location.href = 'index.php?do=connexion';");
+		print ("location.href = '../index.php';");
 		print ("</script>");
 	}
 ?>
