@@ -20,7 +20,7 @@
 
     <div class="container">
 
-      <form class="form-signin" name="ajout" action="/website/Controleur/ctrl_ajout_recette.php?mem=true" method="POST">
+      <form class="form-signin" name="ajout" method="POST">
         <h2 class="form-signin-heading">Ajouter une recette</h2>
         
           </br>
