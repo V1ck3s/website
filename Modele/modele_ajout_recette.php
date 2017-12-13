@@ -22,11 +22,11 @@
 			$preparation=intval($_POST['rec_prep']);
 			$cuisson=intval($_POST['rec_cuis']);
 			$totale=$preparation+$cuisson;
-			$idUtil=intval($_SESSION['idUtil']);
+			//$idUtil=intval($_SESSION['idUtil']);
 			//création de la requête SQL:
 			$sql="INSERT INTO recette(nom, descriptif, difficulte, prix, nbPersonnes, dureePreparation,
 				dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, qteProtides, idUtil)
-				VALUES (:nom, :descriptif, :difficulte, :prix, :personnes, :preparation, :cuisson, :totale, 0, 0, 0, 0, 0, :idUtil)";
+				VALUES (:nom, :descriptif, :difficulte, :prix, :personnes, :preparation, :cuisson, :totale, 0, 0, 0, 0, 0, 1)";
 				
 			$requete = $this->cx->prepare($sql);
 				
@@ -39,7 +39,7 @@
 			$requete->bindValue(":totale",$totale,PDO::PARAM_INT);			
 			$requete->bindValue(":cuisson",$cuisson,PDO::PARAM_INT);
 			$requete->bindValue(":preparation",$preparation,PDO::PARAM_INT);			
-			$requete->bindValue(":idUtil",$idUtil,PDO::PARAM_INT);	
+			//$requete->bindValue(":idUtil",$idUtil,PDO::PARAM_INT);	
 			
 			//exécution de la requête SQL:
 			$requete->execute();

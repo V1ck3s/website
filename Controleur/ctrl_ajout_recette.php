@@ -3,11 +3,11 @@
 	require ("../Modele/modele_ajout_recette.php");
 
 	$a= new AjoutRecette();			
-				
-	$reussi=$a->create();
 			
 	if($_POST != null)
 	{		
+		$reussi=$a->create();
+		
 		if($reussi)
 		{
 			echo"<script> alert ('La recette a été ajoutée');</script>";
