@@ -1,8 +1,8 @@
 <?php
 
-	require ("../Modele/modele_ajout_recette.php");
+	require ("../Modele/modele_recette.php");
 
-	$a= new AjoutRecette();			
+	$a= new Recette();			
 			
 	if($_POST != null)
 	{		
@@ -35,9 +35,9 @@
 		{
 			if($_POST != null)
 			{
-				require ("../Modele/modele_ajout_recette.php");
+				require ("../Modele/modele_recette.php");
 				
-				$a= new AjoutRecette();			
+				$a= new Recette();			
 				
 				$reussi=$a->create();
 				

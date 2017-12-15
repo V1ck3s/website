@@ -46,8 +46,9 @@
 			  Recettes
 			</a>
 			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			  <a href="/Controleur/ctrl_ajout_recette.php" class="dropdown-item" href="#">Ajouter une recette</a>
 			  <a href="/Controleur/ctrl_liste_recettes.php" class="dropdown-item" href="#">Liste des recettes</a>
+          <a href="/Controleur/ctrl_ajout_recette.php" class="dropdown-item" href="#">Ajouter une recette</a>
+          <a href="/Controleur/ctrl_ajout_ingredient.php" class="dropdown-item" href="#">Ajout un ingrédient à une recette</a>
 			</div>
 		  </li>
 			
