@@ -11,7 +11,7 @@
 	
 	if($uneRecette != null){
 	    //je passe la main à la vue
-	    include("../Vue/vue_detail_recette.php");
+	    include("../Vue/vue_detail_recettes.php");
 	}
 	else
 	{

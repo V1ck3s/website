@@ -33,10 +33,10 @@ h1 {
   border-left: 1px solid #eee;
 }
 
-.sidebarright {
+.rightsidebar {
   position: fixed;
   top: 51px;
-  bottom: 0;
+  bottom: 0px;
   right: 0;
   z-index: 1000;
   padding: 20px 0;

@@ -12,7 +12,7 @@
     <?php include('../navbar.php'); ?>
 
     <!-- Custom styles for this template -->
-    <link href="/website/css/signin.css" rel="stylesheet">
+    <link href="/css/signin.css" rel="stylesheet">
       
   </head>
 
