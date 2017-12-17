@@ -24,12 +24,12 @@
 			//récupération des valeurs des champs:
 			$nom=$_POST['nom'];
 			$mesure=$_POST['mesure'];
-			$qte=intval($_POST['qte']);
-			$cal=intval($_POST['cal']);
-			$prote=intval($_POST['prote']);
-			$glu=intval($_POST['glu']);
-			$lip=intval($_POST['lip']);
-			$proti=intval($_POST['proti']);
+			$qte=$_POST['qte'];
+			$cal=$_POST['cal'];
+			$prote=$_POST['prote'];
+			$glu=$_POST['glu'];
+			$lip=$_POST['lip'];
+			$proti=$_POST['proti'];
 			//création de la requête SQL:
 			$sql="INSERT INTO ingredient(nom, mesure, qteParDefaut, qteCalories,
 				qteProteines, qteGlucides, qteLipides, qteProtides)
@@ -40,12 +40,12 @@
 			//J'associe les valeurs
 			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
 			$requete->bindValue(":mesure",$mesure,PDO::PARAM_STR);
-			$requete->bindValue(":qte",$qte,PDO::PARAM_INT);
-			$requete->bindValue(":cal",$cal,PDO::PARAM_INT);
-			$requete->bindValue(":prote",$prote,PDO::PARAM_INT);	
-			$requete->bindValue(":glu",$glu,PDO::PARAM_INT);	
-			$requete->bindValue(":lip",$lip,PDO::PARAM_INT);	
-			$requete->bindValue(":proti",$proti,PDO::PARAM_INT);			
+			$requete->bindValue(":qte",$qte,PDO::PARAM_STR);
+			$requete->bindValue(":cal",$cal,PDO::PARAM_STR);
+			$requete->bindValue(":prote",$prote,PDO::PARAM_STR);	
+			$requete->bindValue(":glu",$glu,PDO::PARAM_STR);	
+			$requete->bindValue(":lip",$lip,PDO::PARAM_STR);	
+			$requete->bindValue(":proti",$proti,PDO::PARAM_STR);			
 			
 			//exécution de la requête SQL:
 			$requete->execute();
@@ -110,6 +110,91 @@
 			$sql="UPDATE ingredient SET nom=:nom WHERE idIngre=:id";
 			$requete = $this->cx->prepare($sql);				
 			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateCal($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$cal=$_POST['cal_modif'];
+			$sql="UPDATE ingredient SET qteCalories=:cal WHERE idIngre=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":cal",$cal,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateProte($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$prote=$_POST['prote_modif'];
+			$sql="UPDATE ingredient SET qteProteines=:prote WHERE idIngre=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":prote",$prote,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateGlu($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$glu=$_POST['glu_modif'];
+			$sql="UPDATE ingredient SET qteGlucides=:glu WHERE idIngre=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":glu",$glu,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateLip($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$lip=$_POST['lip_modif'];
+			$sql="UPDATE ingredient SET qteLipides=:lip WHERE idIngre=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":lip",$lip,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateProti($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$proti=$_POST['proti_modif'];
+			$sql="UPDATE ingredient SET qteProtides=:proti WHERE idIngre=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":proti",$proti,PDO::PARAM_STR);
 			$requete->bindValue(":id",$id,PDO::PARAM_INT);
 			$requete->execute();
 			

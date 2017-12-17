@@ -29,7 +29,22 @@
 				}
 				echo "</select>";
 				echo '<label for="nom_modif">Nom</label>
-					<input type="text" class="form-control" id="nom_modif" name="nom_modif"/>';
+					<input type="text" class="form-control" id="nom_modif" name="nom_modif"/>
+					
+					<label for="cal_modif">Quantité calories</label>
+					<input type="text" class="form-control" id="cal_modif" name="cal_modif"/>
+					
+					<label for="prote_modif">Quantité protéines</label>
+					<input type="text" class="form-control" id="prote_modif" name="prote_modif"/>
+					
+					<label for="glu_modif">Quantité glucides</label>
+					<input type="text" class="form-control" id="glu_modif" name="glu_modif"/>
+					
+					<label for="lip_modif">Quantité lipides</label>
+					<input type="text" class="form-control" id="lip_modif" name="lip_modif"/>
+					
+					<label for="proti_modif">Quantité protides</label>
+					<input type="text" class="form-control" id="proti_modif" name="proti_modif"/>';
 			?>
 			<p>
 				<input type="submit" class="btn btn-default" value="Modifier" id="envoyer" />
