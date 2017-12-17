@@ -24,11 +24,6 @@
         <h2 class="form-signin-heading">Ajouter un ingrédient à une recette</h2>
         
           </br>
-        <label for="fin">Nom</label>
-        <input type="text" name="rec_nom" id="rec_nom" class="form-control" required>
-        
-        <label for="fin">Descriptif</label>
-		<textarea rows="10" cols="39" name="rec_desc" id="rec_desc" placeholder="Description, étapes de préparation etc..." required></textarea>
         
         <label for="fin">Recette</label>
 		</br>

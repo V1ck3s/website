@@ -35,7 +35,7 @@
         </ul>
         <li class="item3">Ingrédients</li>
         <ul>
-        		
+        		<li class="subitem1"><a href="../admin/Controleur/ctrl_creer_ingredient.php">Création ingrédient </a></li>
                 <li class="subitem2"><a href="../admin/Controleur/ctrl_modif_ingredient.php">Modification ingrédient </a></li>
                 <li class="subitem3"><a href="../admin/Controleur/ctrl_sup_ingredient.php">Suppression ingrédient </a></li>
         </ul>

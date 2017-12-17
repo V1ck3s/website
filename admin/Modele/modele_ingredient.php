@@ -17,6 +17,45 @@
 			return $curseur;
 		}
 		
+		public function createIngredient(){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+		  
+			//récupération des valeurs des champs:
+			$nom=$_POST['nom'];
+			$mesure=$_POST['mesure'];
+			$qte=intval($_POST['qte']);
+			$cal=intval($_POST['cal']);
+			$prote=intval($_POST['prote']);
+			$glu=intval($_POST['glu']);
+			$lip=intval($_POST['lip']);
+			$proti=intval($_POST['proti']);
+			//création de la requête SQL:
+			$sql="INSERT INTO ingredient(nom, mesure, qteParDefaut, qteCalories,
+				qteProteines, qteGlucides, qteLipides, qteProtides)
+				VALUES (:nom, :mesure, :qte, :cal, :prote, :glu, :lip, :proti)";
+				
+			$requete = $this->cx->prepare($sql);
+				
+			//J'associe les valeurs
+			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
+			$requete->bindValue(":mesure",$mesure,PDO::PARAM_STR);
+			$requete->bindValue(":qte",$qte,PDO::PARAM_INT);
+			$requete->bindValue(":cal",$cal,PDO::PARAM_INT);
+			$requete->bindValue(":prote",$prote,PDO::PARAM_INT);	
+			$requete->bindValue(":glu",$glu,PDO::PARAM_INT);	
+			$requete->bindValue(":lip",$lip,PDO::PARAM_INT);	
+			$requete->bindValue(":proti",$proti,PDO::PARAM_INT);			
+			
+			//exécution de la requête SQL:
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
 		public function deleteIngredient($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;

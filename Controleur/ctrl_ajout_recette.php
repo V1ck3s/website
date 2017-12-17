@@ -1,7 +1,5 @@
 <?php
-
 	require ("../Modele/modele_recette.php");
-
 	$a= new Recette();			
 			
 	if($_POST != null)
@@ -27,7 +25,6 @@
 	}
 	
 	include("../Vue/vue_ajout_recette.php");
-
  /*
 	if(isset($_SESSION['login']))
 	{	
@@ -35,9 +32,9 @@
 		{
 			if($_POST != null)
 			{
-				require ("../Modele/modele_recette.php");
+				require ("../Modele/modele_ajout_recette.php");
 				
-				$a= new Recette();			
+				$a= new AjoutRecette();			
 				
 				$reussi=$a->create();
 				
