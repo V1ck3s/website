@@ -1,4 +1,5 @@
 <?php
+    session_start();
 			//j'indique que j'ai besoin du fichier modele_table_article
 			//qui contient la classe table membre
 			require ("../Modele/modele_connexion_membre.php");
@@ -20,7 +21,7 @@
 					echo"<script> alert ('Login ou Mot De Passe Incorrect !');</script>";
 					// et redirection vers la page d'accueil
 					print ("<script language = \"JavaScript\">");
-					print ("location.href = '../Vue/vue_connexion.php';");
+					print ("location.href = '../Vue/vue_connexion_membre.php';");
 					print ("</script>");
 				}
 			}

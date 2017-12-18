@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
 	require ("../Modele/modele_recette.php");
 	require ("../Modele/modele_ingredient.php");
 		

@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	require_once ("../Modele/modele_recette.php");
 	require_once ("../Modele/modele_ingredient.php");
 	

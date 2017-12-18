@@ -1,4 +1,5 @@
 <?php
+        session_start();
 		require ("../Modele/modele_planning.php");
 		
 		$p= new Planning();

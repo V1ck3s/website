@@ -1,5 +1,6 @@
 <?php
-	require ("../Modele/modele_recette.php");
+	session_start();
+    require ("../Modele/modele_recette.php");
 	$a= new Recette();			
 			
 	if($_POST != null)

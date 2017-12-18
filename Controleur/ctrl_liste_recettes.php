@@ -1,4 +1,5 @@
 <?php
+    session_start();
 		require ("../Modele/modele_recette.php");
 		
 		$r= new Recette();
