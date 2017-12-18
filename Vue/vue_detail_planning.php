@@ -44,14 +44,13 @@
               </thead>
               <tbody>
                 <?php
-                    foreach($uneRecette as $donnees) {
+                    foreach($uneRecette as $donnees) 
                     {
                         echo "<tr>
                             <td>".$donnees->recNom."</td>
                             <td>".$donnees->utilPrenom." ".$donnees->utilNom."</td>
                             <td>".$donnees->dateServi."</td>
                         </tr>";
-
                     }
                 ?>
               </tbody>
