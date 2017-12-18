@@ -35,7 +35,7 @@
 	
 	
 	
-	/*if(isset($_SESSION['login']))
+	if(isset($_SESSION['login']))
 	{	
 		require ("../Modele/modele_recette.php");
 		require ("../Modele/modele_ingredient.php");
@@ -90,5 +90,5 @@
 		print ("<script language = \"JavaScript\">");
 		print ("location.href = '../index.php';");
 		print ("</script>");
-	}*/
+	}
 ?>

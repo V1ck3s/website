@@ -26,7 +26,7 @@
 	}
 	
 	include("../Vue/vue_ajout_recette.php");
- /*
+ 
 	if(isset($_SESSION['login']))
 	{	
 		if(isset($_GET['ins']))
@@ -78,5 +78,5 @@
 		print ("location.href = '../index.php';");
 		print ("</script>");
 	}
-*/
+
 ?>
