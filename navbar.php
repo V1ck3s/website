@@ -53,7 +53,7 @@
 		  </li>
 			
 			<li class="nav-item">
-			<a class="nav-link" href="#">Planning</a>
+			<a href="/Controleur/ctrl_planning.php" class="nav-link" href="#">Planning</a>
 		  </li>
 		
 		</ul>
