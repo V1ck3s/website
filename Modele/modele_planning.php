@@ -63,7 +63,7 @@
 		
 		public function findRec($idPlanning){
 			//je reçois ma requête SQL
-			$req = "SELECT recette.nom AS recNom, utilisateur.nom AS utilNom, utilisateur.prenom, est_servi.dateServi
+			$req = "SELECT recette.nom AS recNom, utilisateur.nom AS utilNom, utilisateur.prenom AS utilPrenom, est_servi.dateServi
 					FROM recette
 					INNER JOIN utilisateur
 					ON recette.idUtil = utilisateur.idUtil
