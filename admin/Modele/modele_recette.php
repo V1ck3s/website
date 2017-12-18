@@ -4,112 +4,199 @@
 		private $cx;
 		
 		public function __construct(){
-			require_once("../Modele/modele_connexion_base.php");
+			require_once("../connexion.php");
 			$this->cx = Connexion::getInstance();
 		}
 		
 		//Retourne un curseur contenant toutes les recettes
 		public function readAll(){
-			$req = "SELECT recette.idRec, recette.nom AS lib, descriptif, difficulte, prix, nbPersonnes, 
-					dureePreparation, dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, 
-					utilisateur.nom AS utilNom, utilisateur.prenom AS utilprenom, illustration.adresse
-					FROM recette 
-					INNER JOIN utilisateur
-					ON recette.idUtil = utilisateur.idUtil
-					INNER JOIN illustration
-					ON recette.idRec = illustration.idRec
-					ORDER BY recette.nom ASC";
+			$req = "SELECT *
+					FROM recette
+					ORDER BY nom ASC";
 			$curseur=$this->cx->query($req);
 			return $curseur;
 		}
 		
-		//retourne un curseur contenant l'objet associer à l'identifiant passé en paramètre
-		//on utilise ici la technique des requêtes préparées qui permettent d'éviter les injonctions SQL
-		public function findById($idRecette){
-			//je reçois ma requête SQL
-			$req = "SELECT recette.nom AS libRec, descriptif, difficulte, prix, nbPersonnes, 
-					dureePreparation, dureeCuisson, dureeTotale, recette.qteCalories AS cal, recette.qteProteines AS prot, recette.qteGlucides AS glu, recette.qteLipides AS lip,
-					utilisateur.nom AS utilNom, utilisateur.prenom, illustration.adresse
-					FROM recette 
-					INNER JOIN utilisateur
-					ON recette.idUtil = utilisateur.idUtil
-					INNER JOIN illustration
-					ON recette.idRec = illustration.idRec
-					INNER JOIN contenu
-					ON recette.idRec = contenu.idRec
-					INNER JOIN ingredient
-					ON contenu.idIngre = ingredient.idIngre
-					WHERE recette.idRec = :id";
-			
-			//je prépare ma requête
-			$prep = $this->cx->prepare($req);
-			
-			//j'associe les paramètres
-			$prep->bindValue(':id', $idRecette, PDO::PARAM_STR);
-			
-			//j'exécute
-			$prep->execute();
-			
-			//je remplis le curseur
-			$curseur = $prep->fetchObject();
-			return $curseur;
-		}
-		
-		public function create(){
+		public function deleteRecette($id){
 			//Booléen permettant de vérifier l'éxécution de la requête
 			$valid=false;
-		  
-			//récupération des valeurs des champs:
-			$nom=$_POST['rec_nom'];
-			$descriptif=$_POST['rec_desc'];
-			$difficulte=$_POST['rec_dif'];
-			$prix=intval($_POST['rec_prix']);
-			$personnes=intval($_POST['rec_pers']);
-			$preparation=intval($_POST['rec_prep']);
-			$cuisson=intval($_POST['rec_cuis']);
-			$totale=$preparation+$cuisson;
-			//$idUtil=intval($_SESSION['idUtil']);
+			
 			//création de la requête SQL:
-			$sql="INSERT INTO recette(nom, descriptif, difficulte, prix, nbPersonnes, dureePreparation,
-				dureeCuisson, dureeTotale, qteCalories, qteProteines, qteGlucides, qteLipides, qteProtides, idUtil)
-				VALUES (:nom, :descriptif, :difficulte, :prix, :personnes, :preparation, :cuisson, :totale, 0, 0, 0, 0, 0, 1)";
-				
+			$sql="DELETE FROM illustration WHERE idRec=:id";
+			
 			$requete = $this->cx->prepare($sql);
 				
 			//J'associe les valeurs
-			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
-			$requete->bindValue(":descriptif",$descriptif,PDO::PARAM_STR);
-			$requete->bindValue(":difficulte",$difficulte,PDO::PARAM_STR);	
-			$requete->bindValue(":prix",$prix,PDO::PARAM_INT);	
-			$requete->bindValue(":personnes",$personnes,PDO::PARAM_INT);	
-			$requete->bindValue(":totale",$totale,PDO::PARAM_INT);			
-			$requete->bindValue(":cuisson",$cuisson,PDO::PARAM_INT);
-			$requete->bindValue(":preparation",$preparation,PDO::PARAM_INT);			
-			//$requete->bindValue(":idUtil",$idUtil,PDO::PARAM_INT);	
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
 			
 			//exécution de la requête SQL:
 			$requete->execute();
 			
-			//récupération de l'ID inséré			
-			$new_recette = $this->cx->lastInsertId();
-			
-			//récupération des valeurs des champs:
-			$adresse=$_POST['rec_illu'];
-			
-			//création de la requête SQL:
-			$sql2="INSERT INTO illustration(adresse, idRec)
-				VALUES (:adresse, :new_recette)";
-			
-			$requete2 = $this->cx->prepare($sql2);
-				
-			//J'associe les valeurs
-			$requete2->bindValue(":adresse",$adresse,PDO::PARAM_STR);
-			$requete2->bindValue(":new_recette",$new_recette,PDO::PARAM_INT);
-			
-			//exécution de la requête SQL:
+			$sql2="DELETE FROM peut_remplacer WHERE idRec=:id";			
+			$requete2 = $this->cx->prepare($sql2);				
+			$requete2->bindValue(":id",$id,PDO::PARAM_INT);			
 			$requete2->execute();
 			
-			if($requete && $requete2){
+			$sql3="DELETE FROM contenu WHERE idRec=:id";			
+			$requete3 = $this->cx->prepare($sql3);				
+			$requete3->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete3->execute();
+			
+			$sql4="DELETE FROM conforme WHERE idRec=:id";			
+			$requete4 = $this->cx->prepare($sql4);				
+			$requete4->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete4->execute();
+			
+			$sql5="DELETE FROM est_present WHERE idRec=:id";			
+			$requete5 = $this->cx->prepare($sql5);				
+			$requete5->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete5->execute();
+			
+			$sql6="DELETE FROM recette WHERE idRec=:id";			
+			$requete6 = $this->cx->prepare($sql6);				
+			$requete6->bindValue(":id",$id,PDO::PARAM_INT);			
+			$requete6->execute();
+			
+			if($requete && $requete2 && $requete3 && $requete4 && $requete5 && $requete6){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateNom($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$nom=$_POST['nom_modif'];
+			$sql="UPDATE recette SET nom=:nom WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":nom",$nom,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+        
+        public function updateDesc($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$desc=$_POST['desc_modif'];
+			$sql="UPDATE recette SET descriptif=:desc WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":desc",$desc,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateDif($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$dif=$_POST['dif_modif'];
+			$sql="UPDATE recette SET difficulte=:dif WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":dif",$dif,PDO::PARAM_STR);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updatePrix($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$prix=intval($_POST['prix_modif']);
+			$sql="UPDATE recette SET prix=:prix WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":prix",$prix,PDO::PARAM_INT);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateNbPers($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$pers=intval($_POST['nb_modif']);
+			$sql="UPDATE recette SET nbPersonnes=:pers WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":pers",$pers,PDO::PARAM_INT);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updatePrep($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$totale="UPDATE recette SET dureeTotale=0 WHERE idRec=:id";
+			$reqTotale = $this->cx->prepare($totale);
+			$reqTotale->bindValue(":id",$id,PDO::PARAM_INT);	
+			$reqTotale->execute();
+			
+			$prep=intval($_POST['prep_modif']);
+			$sql="UPDATE recette SET dureePreparation=:prep WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":prep",$prep,PDO::PARAM_INT);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			$newTotale="UPDATE recette SET dureeTotale=dureePreparation+dureeCuisson WHERE idRec=:id";
+			$reqNewTotale = $this->cx->prepare($newTotale);
+			$reqNewTotale->bindValue(":id",$id,PDO::PARAM_INT);
+			$reqNewTotale->execute();
+			
+			if($requete){
+				$valid=true;
+			}
+			return $valid;
+		}
+		
+		public function updateCuis($id){
+			//Booléen permettant de vérifier l'éxécution de la requête
+			$valid=false;
+			
+			$totale="UPDATE recette SET dureeTotale=0 WHERE idRec=:id";
+			$reqTotale = $this->cx->prepare($totale);
+			$reqTotale->bindValue(":id",$id,PDO::PARAM_INT);			
+			$reqTotale->execute();
+			
+			$cuis=intval($_POST['cuis_modif']);
+			$sql="UPDATE recette SET dureeCuisson=:cuis WHERE idRec=:id";
+			$requete = $this->cx->prepare($sql);				
+			$requete->bindValue(":cuis",$cuis,PDO::PARAM_INT);
+			$requete->bindValue(":id",$id,PDO::PARAM_INT);
+			$requete->execute();
+			
+			$newTotale="UPDATE recette SET dureeTotale=dureePreparation+dureeCuisson WHERE idRec=:id";
+			$reqNewTotale = $this->cx->prepare($newTotale);
+			$reqNewTotale->bindValue(":id",$id,PDO::PARAM_INT);			
+			$reqNewTotale->execute();
+			
+			if($requete){
 				$valid=true;
 			}
 			return $valid;
