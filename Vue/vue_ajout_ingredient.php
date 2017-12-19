@@ -60,6 +60,10 @@
           
         <button class="btn btn-lg btn-primary btn-block" type="submit" id="envoyer">Ajouter</button>
 		<button class="btn btn-lg btn-primary btn-block" type="reset" id="annuler">Annuler</button>
+		
+		<br>
+		
+	    <p>En cas d'ingrédient manquant, contactez l'administrateur</p>
       </form>
 
     </div> <!-- /container -->
