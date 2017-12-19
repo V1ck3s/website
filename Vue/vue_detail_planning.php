@@ -13,7 +13,7 @@
     <?php include('../navbar.php'); ?>
     <script src="/js/details.js"></script>
     <!-- Custom styles for this template -->
-    <link href="/css/details.css" rel="stylesheet">
+    <link href="/css/liste.css" rel="stylesheet">
   </head>
 
   <body>

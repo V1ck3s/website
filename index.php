@@ -130,7 +130,7 @@
             <p class="lead">Sed ultra dignitatis ad oppido usibus et sed et ob asperos motus crebros insolenter seditiones institutus ob avidis potestate intentum prudens sunt ob efferens usibus et institutus vini: concitatae sed !</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="/img/Soupe-d%E2%80%99aubergine-au-poitrine-de-porc.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="/img/soupe.jpg" alt="Generic placeholder image">
           </div>
         </div>
 
