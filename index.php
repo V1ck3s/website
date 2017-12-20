@@ -65,11 +65,11 @@
         </a>
       </div>
 
-        <!-- Entre le caroussel et les recettes  -->
+        <!-- Entre le carousel et les recettes  -->
 
       <div class="container marketing">
 
-        <!-- Les trois recettes sous le caroussel (je sais plus comment on l'écrit) -->
+        <!-- Les trois recettes sous le carousel -->
         <div class="row">
           <div class="col-lg-4">
             <img class="rounded-circle" src="/img/9e8419a67a0bc9214c235f7634533dfb.jpg" alt="Generic placeholder image" width="140" height="140">

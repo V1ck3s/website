@@ -4,7 +4,6 @@
 	$user='wiyhousp_root';
 	$mdp='Rootmdp1';
 
-	// test de connexion à mysql	@ devant la commande
 	// évite que le message mysql ne s'affiche
 	try
 	{

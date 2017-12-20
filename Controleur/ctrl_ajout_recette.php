@@ -14,7 +14,7 @@
 		    if($reussi)
 	    	{
     			echo"<script> alert ('La recette a été ajoutée');</script>";
-    			// et redirection vers la page d'accueil
+    			// et redirection vers la page d'ajout
     			print ("<script language = \"JavaScript\">");
     			print ("location.href = '../Controleur/ctrl_ajout_recette.php';");
     			print ("</script>");
@@ -22,7 +22,7 @@
     		else
     		{
     			echo"<script> alert('La recette n'a pas été ajoutée');</script>";
-    			// et redirection vers la page d'inscription
+    			// et redirection vers la page d'ajout
     			print ("<script language = \"JavaScript\">");
     			print ("location.href = '../Controleur/ctrl_ajout_recette.php';");
     			print ("</script>");				

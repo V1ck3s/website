@@ -8,7 +8,7 @@
 			$this->cx = Connexion::getInstance();
 		}
 		
-		//Retourne un curseur contenant toutes les recettes
+		//Retourne un curseur contenant tous les ingrédients
 		public function readAll(){
 			$req = "SELECT *
 					FROM ingredient

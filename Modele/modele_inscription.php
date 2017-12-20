@@ -8,28 +8,26 @@
 			$this->cx = Connexion::getInstance();
 		}
     
-		//initialise l'instance d'inscription
 		public function create(){
 			//récupération des valeurs des champs:
-			 $nom=$_POST['ins_nom'];
-			 $prenom=$_POST['ins_prenom'];
-			 $login=$_POST['ins_login'];
-             $mail=$_POST['ins_mail'];
-             $mdp=md5($_POST['ins_pass']);
-			 
+			$nom=$_POST['ins_nom'];
+			$prenom=$_POST['ins_prenom'];
+			$login=$_POST['ins_login'];
+            $mail=$_POST['ins_mail'];
+            $mdp=md5($_POST['ins_pass']);		 
 			 
 			//requête permettant de vérifier la présence ou non d'un login d'utilisateur
-		   $sql = "SELECT mail FROM utilisateur WHERE mail = '".$_POST["ins_mail"]."' ";
-		   $uneRequete = $this->cx->query($sql);
-		   $uneRequete->execute();
-		   //Renvoie le nombre de ligne présent (0 = aucune données présentes)
-		   //Si le login de l'utilisateur n'est pas présent dans la base de données on l'insère
+			$sql = "SELECT mail FROM utilisateur WHERE mail = '".$_POST["ins_mail"]."' ";
+			$uneRequete = $this->cx->query($sql);
+			$uneRequete->execute();
+			//Renvoie le nombre de ligne présent (0 = aucune données présentes)
+			//Si le login de l'utilisateur n'est pas présent dans la base de données on l'insère
 		   
-		   $existe=false;
-		   if($user=$uneRequete->fetch(PDO::FETCH_OBJ))
-		   {
+			$existe=false;
+			if($user=$uneRequete->fetch(PDO::FETCH_OBJ))
+			{
 				$existe=true;
-		   }
+			}
 			
 			if(!$existe){
 				//création de la requête SQL:

@@ -1,10 +1,11 @@
 <?php
     session_start();
-		require ("../Modele/modele_recette.php");
+	
+	require ("../Modele/modele_recette.php");
 		
-		$r= new Recette();
+	$r= new Recette();
 		
-		$lesRecettes=$r->readAll();
+	$lesRecettes=$r->readAll();
 
-		include("../Vue/vue_liste_recettes.php");
+	include("../Vue/vue_liste_recettes.php");
 ?>	

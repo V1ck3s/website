@@ -9,8 +9,7 @@
 		}
 
 		public function existe()
-		{
-			
+		{	
 			//on récupère, via la méthode "post" les données envoyées
 			$login= $_POST['conn_login'];//identifiant de connexion
 			$pass=md5($_POST['conn_pass']);//mot de passe de connexion

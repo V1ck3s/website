@@ -1,5 +1,6 @@
 <?php
     session_start();
+	
 	require_once ("../Modele/modele_planning.php");
 	
 	$p=new Planning();

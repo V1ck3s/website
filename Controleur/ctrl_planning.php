@@ -1,10 +1,11 @@
 <?php
-        session_start();
-		require ("../Modele/modele_planning.php");
+    session_start();
+	
+	require ("../Modele/modele_planning.php");
 		
-		$p= new Planning();
+	$p= new Planning();
 		
-		$lesPlannings=$p->readAll();
+	$lesPlannings=$p->readAll();
 
-		include("../Vue/vue_planning.php");
+	include("../Vue/vue_planning.php");
 ?>	

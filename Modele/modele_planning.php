@@ -8,7 +8,7 @@
 			$this->cx = Connexion::getInstance();
 		}
 		
-		//Retourne un curseur contenant toutes les recettes
+		//Retourne un curseur contenant tous les plannings
 		public function readAll(){
 			$req = "SELECT planning.idPlan AS pidP, dateDebut, dateFin, est_servi.idPlan, est_servi.idMen, est_servi.dateServi, menu.idMen, 
 					est_present.idMen, est_present.idRec, recette.idRec, recette.nom AS recNom, utilisateur.nom AS utilNom, utilisateur.prenom  AS utilPrenom
