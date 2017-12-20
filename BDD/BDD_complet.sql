@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : front-ha-mysql-01.shpv.fr:3306
--- Généré le :  lun. 18 déc. 2017 à 22:23
+-- Généré le :  mer. 20 déc. 2017 à 18:21
 -- Version du serveur :  5.6.38
 -- Version de PHP :  5.6.30
 
@@ -92,6 +92,7 @@ INSERT INTO `contenu` (`quantite`, `idRec`, `idIngre`) VALUES
 (3, 1, 5),
 (1, 1, 6),
 (100, 1, 7),
+(5, 1, 10),
 (50, 3, 1),
 (50, 3, 7),
 (6, 3, 15),
@@ -510,7 +511,7 @@ CREATE TABLE `recette` (
 --
 
 INSERT INTO `recette` (`idRec`, `nom`, `descriptif`, `difficulte`, `prix`, `nbPersonnes`, `dureePreparation`, `dureeCuisson`, `dureeTotale`, `qteCalories`, `qteProteines`, `qteGlucides`, `qteLipides`, `qteProtides`, `idUtil`) VALUES
-(1, 'Kougelhopf', 'Gâteau alsacien', 'Facile', 1, 8, 10, 45, 55, 735, 735, 735, 735, 735, 1),
+(1, 'Kougelhopf', 'Gâteau alsacien', 'Facile', 1, 8, 10, 45, 55, 740, 740, 740, 740, 740, 1),
 (3, 'Langue de boeuf sauce piquante aux cornichons', 'Ce plat est encore meilleur réchauffé.', 'Difficile', 3, 6, 30, 105, 135, 787, 787, 787, 787, 787, 1),
 (8, 'Salade de quinoa', 'Ca ressemble a du taboulé, mais c\'est beaucoup plus léger, et vraiment plus original !! Ca croustille!!!', 'Très facile', 1, 4, 15, 15, 30, 194.5, 194.5, 194.5, 194.5, 194.5, 2);
 
@@ -558,7 +559,9 @@ INSERT INTO `utilisateur` (`idUtil`, `nom`, `prenom`, `login`, `mail`, `mdp`) VA
 (2, 'Razowski', 'Bob', 'bob', 'bob@gmail.com', '9f9d51bc70ef21ca5c14f307980a29d8'),
 (3, 'De Santa', 'Michael', 'mds', 'mds@hotmail.fr', '60a114c91c41983174b484e188856fb3'),
 (6, 'Coffe', 'Jean-Pierre', 'Coffe', 'jpcoffe@ripdouille.fr', '8860aab6453e117ddbc7a373fcd1eb68'),
-(12, 'renard', 'gilbert', 'guillaume', 'g@arte.tv', '098f6bcd4621d373cade4e832627b4f6');
+(12, 'renard', 'gilbert', 'guillaume', 'g@arte.tv', '098f6bcd4621d373cade4e832627b4f6'),
+(15, 'Skywalker', 'Luke', 'r2d2', 'jedi@ahchto.com', '05cea049b2e5b055290f362c8dd30657'),
+(16, 'supprimé', 'Utilisateur', 'delete', 'delete@projet-recettes.tk', '099af53f601532dbd31e0ea99ffdeb64');
 
 --
 -- Index pour les tables déchargées
@@ -697,12 +700,12 @@ ALTER TABLE `administration`
 -- AUTO_INCREMENT pour la table `illustration`
 --
 ALTER TABLE `illustration`
-  MODIFY `idIllu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idIllu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT pour la table `ingredient`
 --
 ALTER TABLE `ingredient`
-  MODIFY `idIngre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idIngre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT pour la table `liste_achat`
 --
@@ -722,7 +725,7 @@ ALTER TABLE `planning`
 -- AUTO_INCREMENT pour la table `recette`
 --
 ALTER TABLE `recette`
-  MODIFY `idRec` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idRec` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT pour la table `regime`
 --
@@ -732,7 +735,7 @@ ALTER TABLE `regime`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idUtil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- Contraintes pour les tables déchargées
 --

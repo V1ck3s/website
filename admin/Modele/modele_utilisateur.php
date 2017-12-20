@@ -32,17 +32,17 @@
 			//exécution de la requête SQL:
 			$requete->execute();
 			
-			$sql2="UPDATE menu SET idUtil=15 WHERE idUtil=:id";			
+			$sql2="UPDATE menu SET idUtil=16 WHERE idUtil=:id";	// id 16 = User nommé "Utilisateur supprimé"		
 			$requete2 = $this->cx->prepare($sql2);				
 			$requete2->bindValue(":id",$id,PDO::PARAM_INT);			
 			$requete2->execute();
 			
-			$sql3="UPDATE planning SET idUtil=15 WHERE idUtil=:id";			
+			$sql3="UPDATE planning SET idUtil=16 WHERE idUtil=:id";			
 			$requete3 = $this->cx->prepare($sql3);				
 			$requete3->bindValue(":id",$id,PDO::PARAM_INT);			
 			$requete3->execute();
 			
-			$sql4="UPDATE liste_achat SET idUtil=15 WHERE idUtil=:id";			
+			$sql4="UPDATE liste_achat SET idUtil=16 WHERE idUtil=:id";			
 			$requete4 = $this->cx->prepare($sql4);				
 			$requete4->bindValue(":id",$id,PDO::PARAM_INT);			
 			$requete4->execute();

@@ -43,9 +43,16 @@
                 <br>
                 Difficulté : <b>".$uneRecette->difficulte."</b>
                 <br>
-                Prix : <b>".$uneRecette->prix."</b>
+                Prix : <b>".$uneRecette->prix." sur 5</b>
                 <br>
                 Pour : <b>".$uneRecette->nbPersonnes." personne(s) </b>
+				<br>
+                Durée de préparation : <b>".$uneRecette->dureePreparation." minutes</b>
+                <br>
+                Durée de cuisson : <b>".$uneRecette->dureeCuisson." minutes</b>
+                <br>
+                Durée totale : <b>".$uneRecette->dureeTotale." minutes</b>
+            </div>";
             </div>";
             
             echo "<div class=\"col-6 col-lg-12\">
